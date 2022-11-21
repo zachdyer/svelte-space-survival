@@ -1,5 +1,5 @@
 <script>
-  import Battery from "./lib/Battery.svelte"
+  import Vehicle from "./lib/Vehicle.svelte"
 </script>
 
 <main>
@@ -13,7 +13,7 @@
       <h3>Components</h3>
       <p>Components are the building blocks of vehicles and add functionality and attributes.</p>
     </div>
-    <Battery/>
+    <Vehicle/>
   </div>
 </main>
 
