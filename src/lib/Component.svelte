@@ -9,10 +9,9 @@
   export let listItems = []
   export let buttons = []
 </script>
-
-<div class="card" style="width: 18rem;">
+<div class="card">
   {#if progressValue }
-  <div class="progress">
+  <div class="progress rounded-0">
     <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: {progressWidth}%" aria-valuenow={progressValue} aria-valuemin={progressMin} aria-valuemax={progressMax}></div>
   </div>
   {/if}
@@ -29,7 +28,7 @@
   </ul>
   {/if}
   {#if buttons}
-  <div class="card-body">
+  <div class="card-footer">
     {#each buttons as button}
     <a href="#" class="card-link" on:click={button.handler}>{button.title}</a>
     {/each}

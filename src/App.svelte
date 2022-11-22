@@ -13,7 +13,7 @@
       <h3>Components</h3>
       <p>Components are the building blocks of vehicles and add functionality and attributes.</p>
     </div>
-    <Vehicle/>
+    <Vehicle title="Satelite"/>
   </div>
 </main>
 
