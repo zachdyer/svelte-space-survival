@@ -8,11 +8,12 @@
   export let img
   export let listItems = []
   export let buttons = []
+  export let progressStyle
 </script>
 <div class="card">
   {#if progressValue }
   <div class="progress rounded-0">
-    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: {progressWidth}%" aria-valuenow={progressValue} aria-valuemin={progressMin} aria-valuemax={progressMax}></div>
+    <div class="progress-bar {progressStyle}" role="progressbar" style="width: {progressWidth}%" aria-valuenow={progressValue} aria-valuemin={progressMin} aria-valuemax={progressMax}></div>
   </div>
   {/if}
   {#if img}<img class="card-img-top" src={img} alt="Card image cap">{/if}
