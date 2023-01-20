@@ -11,12 +11,12 @@
   export let progressStyle
 </script>
 <div class="card">
+  {#if img}<img class="card-img-top" src={img} alt="Card image cap">{/if}
   {#if progressValue }
   <div class="progress rounded-0">
     <div class="progress-bar {progressStyle}" role="progressbar" style="width: {progressWidth}%" aria-valuenow={progressValue} aria-valuemin={progressMin} aria-valuemax={progressMax}></div>
   </div>
   {/if}
-  {#if img}<img class="card-img-top" src={img} alt="Card image cap">{/if}
   <div class="card-body">
     {#if title}<h5 class="card-title">{title}</h5>{/if}
     {#if text}<p class="card-text">{text}</p>{/if}

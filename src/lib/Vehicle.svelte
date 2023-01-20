@@ -2,6 +2,7 @@
   import Core from './Core.svelte'
   import Battery from './Battery.svelte'
   import Scanner from './Scanner.svelte'
+  import SolarPanel from './SolarPanel.svelte'
   export let title
 </script>
 
@@ -20,10 +21,13 @@
   </ul>
   <div class="tab-content p-3 bg-white" id="myTabContent">
     <div class="tab-pane fade show active" id="components" role="tabpanel" aria-labelledby="home-tab">
-      <div class="card-deck">
+      <div class="card-deck mb-3">
         <Core/>
         <Battery/>
         <Scanner />
+      </div>
+      <div class="card-deck">
+        <SolarPanel/>
       </div>
     </div>
     <div class="tab-pane fade" id="objects" role="tabpanel" aria-labelledby="objects-tab">

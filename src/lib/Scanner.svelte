@@ -5,6 +5,7 @@
   let scannerDuration = 10
   let scanning = false
   let scannerTime = 0
+  let scannerLog = "Use the scanner to gather data about your surroundings." 
   let buttons = [
     {
       title: "Scan Area", 
@@ -12,6 +13,7 @@
         progressStyle = "progress-bar-striped progress-bar-animated bg-success"
         if(!scanning) {
           scanning = true
+          scannerLog = "Scanning area..."
           let loop = setInterval(()=>{
             scannerTime++
             batteryLevel.update(value => value - 1)
@@ -21,6 +23,7 @@
               scanning = false
               progressStyle = "progress-bar-striped bg-success"
               scannerTime = 0
+              scannerLog = "Scanner detected 1 local star. Recommend pointing solar array at star position." 
               setTimeout(()=>scannerProgress = 0,1000)
             }
           }, 1000)
@@ -34,7 +37,7 @@
 
 <Component 
   title="Scanner" 
-  text="Use the scanner to gather data about your surroundings." 
+  text={scannerLog}
   img="/img/radar.jpg"
   buttons={buttons}
   progressValue={scannerProgress}
