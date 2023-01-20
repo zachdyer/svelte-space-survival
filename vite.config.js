@@ -6,5 +6,6 @@ export default defineConfig({
   plugins: [svelte()],
   build: {
     outDir: 'build',
-  }
+  },
+  base: '/svelte-space-survival/',
 })
